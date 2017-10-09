@@ -13,5 +13,6 @@ get '/secret' do
 end
 
 get '/cat' do
+  @cat_name = ['Jeremy', 'Oscar', 'Slim Shady'].sample
   erb(:index)
 end
