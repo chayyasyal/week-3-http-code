@@ -12,7 +12,12 @@ get '/secret' do
   'This message is secret do not show anyone'
 end
 
-get '/cat' do
+get '/random-cat' do
   @cat_name = ['Jeremy', 'Oscar', 'Slim Shady'].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  @cat_name = params[:name]
   erb(:index)
 end
